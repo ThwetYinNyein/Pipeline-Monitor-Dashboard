@@ -1,0 +1,19 @@
+2025-12-18 09:28:34 INFO Pipeline 'cbmdaily' initialized
+2025-12-18 09:28:34 INFO Base directory: d:\Data Team\terminus
+2025-12-18 09:28:34 INFO Log directory: d:\Data Team\terminus\log\cbmdaily
+2025-12-18 09:28:34 INFO Started At: 2025-12-18 09:28:34.225801
+2025-12-18 09:28:55 ERROR connection to server at "ayapay-olap.cci5wy06ehkw.ap-southeast-1.rds.amazonaws.com" (10.192.10.30), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+Traceback (most recent call last):
+  File "d:\Data Team\terminus\pipelines\ayapay\cbmdaily.py", line 190, in main
+    source_conn = connect_to_db(source_db)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Data Team\terminus\pipelines\ayapay\cbmdaily.py", line 61, in connect_to_db
+    conn = psycopg2.connect(**db_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Bankuser\AppData\Local\Programs\Python\Python312\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "ayapay-olap.cci5wy06ehkw.ap-southeast-1.rds.amazonaws.com" (10.192.10.30), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
